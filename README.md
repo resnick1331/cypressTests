@@ -7,11 +7,15 @@
 ### Chapter 1 - Setting up Cypress
 **DONE**
 ### Chapter 2 - Writing the First Test
-* DONE
+**DONE**
 ### Chapter 3 - Accessing Elements and Interacting with Them
-* DONE
+**DONE**
 ### Chapter 4 - Validations
-* DONE
+**DONE**
 ### Chapter 5 - Grouping Test with Mocha
-* DONE
+**DONE**
 ### Chapter 6 - Cypress CLI
+**DONE**
+* npx cypress run
+* npx cypress run --help
+* npx cypress run --spec cypress/e2e/3-test-pratices
