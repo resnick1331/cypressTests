@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+import { TodoPage } from "../../page-objects/todo-page"
+
 /*it("should be able to add a new todo to the list", () => {
     cy.visit("http://todomvc-app-for-testing.surge.sh/")
 
@@ -18,17 +20,19 @@
     cy.get(".todo-list").should("not.have.descendants", "li")
 })*/
 
+const todoPage = new TodoPage()
+
 describe("todo actions", () => {
     beforeEach(() => {
-        cy.visit("http://todomvc-app-for-testing.surge.sh/")
+        todoPage.navigate()
 
-        cy.get('.new-todo', { timeout: 6000 }).type("Finish html course{enter}")
+        todoPage.addTodo("Finish html course{enter}")
         
     })
-    it("should add a new todo to the list", () => {
+    it("should check todo label", () => {
 
-
-        cy.get("label").should("have.text", "Finish html course")
+        todoPage.validateTodoTxt(0,"Finish html course")
+        //cy.get("label").should("have.text", "Finish html course")
 
         cy.get(".toggle").should("not.be.checked")
 
